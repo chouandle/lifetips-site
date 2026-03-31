@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>生活妙招 - 让生活更简单</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 顶部导航 -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="logo">生活妙招</a>
+      <nav class="nav-links">
+        <a href="#" class="active">最新</a>
+        <a href="#">热门</a>
+        <a href="#">精选</a>
+        <a href="#">关于</a>
+      </nav>
+      <button class="nav-toggle" aria-label="菜单">☰</button>
+    </div>
+  </header>
+
+  <!-- 英雄区 -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-tag">每日一招</p>
+      <h1>让生活变得<br /><span>更聪明、更简单</span></h1>
+      <p class="hero-sub">收录厨房、收纳、清洁、健康等各类实用小技巧，助你轻松应对日常生活。</p>
+      <a href="#articles" class="btn-primary">探索技巧</a>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hero-icon">🍋</div>
+        <p>柠檬去油污<br /><small>厨房必备技巧</small></p>
+      </div>
+      <div class="hero-card">
+        <div class="hero-icon">🧺</div>
+        <p>收纳空间翻倍<br /><small>整理达人秘籍</small></p>
+      </div>
+      <div class="hero-card">
+        <div class="hero-icon">🌿</div>
+        <p>天然清洁剂<br /><small>环保又省钱</small></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 分类标签 -->
+  <section class="categories" id="articles">
+    <div class="container">
+      <div class="tag-list">
+        <button class="tag active" data-filter="all">全部</button>
+        <button class="tag" data-filter="kitchen">厨房技巧</button>
+        <button class="tag" data-filter="storage">收纳整理</button>
+        <button class="tag" data-filter="clean">环保清洁</button>
+        <button class="tag" data-filter="health">健康生活</button>
+        <button class="tag" data-filter="diy">创意 DIY</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 文章网格 -->
+  <section class="articles">
+    <div class="container">
+      <div class="grid" id="article-grid">
+
+        <article class="card" data-category="kitchen">
+          <div class="card-img" style="background:#ffe0cc;">🍳</div>
+          <div class="card-body">
+            <span class="card-tag">厨房技巧</span>
+            <h3>用盐水浸泡蔬菜去除农药</h3>
+            <p>加入适量食盐浸泡 15 分钟，比清水清洗效果好 3 倍。</p>
+            <div class="card-meta"><span>⏱ 2 分钟</span><span>👍 1.2k</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="storage">
+          <div class="card-img" style="background:#d4f0e8;">📦</div>
+          <div class="card-body">
+            <span class="card-tag">收纳整理</span>
+            <h3>鞋盒变身抽屉收纳神器</h3>
+            <p>旧鞋盒包上牛皮纸，放入抽屉分区收纳，整洁又省钱。</p>
+            <div class="card-meta"><span>⏱ 3 分钟</span><span>👍 876</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="clean">
+          <div class="card-img" style="background:#e0ecff;">🧴</div>
+          <div class="card-body">
+            <span class="card-tag">环保清洁</span>
+            <h3>小苏打 + 白醋 = 万能清洁剂</h3>
+            <p>混合使用可清洁水垢、除异味，安全无毒，替代化学洗剂。</p>
+            <div class="card-meta"><span>⏱ 1 分钟</span><span>👍 2.3k</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="health">
+          <div class="card-img" style="background:#fff0d4;">🌞</div>
+          <div class="card-body">
+            <span class="card-tag">健康生活</span>
+            <h3>早起喝一杯温柠檬水的好处</h3>
+            <p>促进消化、补充维 C、提升代谢，坚持一周感受明显变化。</p>
+            <div class="card-meta"><span>⏱ 3 分钟</span><span>👍 3.1k</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="diy">
+          <div class="card-img" style="background:#f5d4ff;">✂️</div>
+          <div class="card-body">
+            <span class="card-tag">创意 DIY</span>
+            <h3>废旧 T 恤改造成环保购物袋</h3>
+            <p>无需缝纫，只需剪刀，10 分钟完成，结实耐用又时尚。</p>
+            <div class="card-meta"><span>⏱ 5 分钟</span><span>👍 654</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-category="kitchen">
+          <div class="card-img" style="background:#d4ffe0;">🥬</div>
+          <div class="card-body">
+            <span class="card-tag">厨房技巧</span>
+            <h3>保鲜膜正确使用延长食物保质期</h3>
+            <p>先用厨房纸吸干水分再包裹，蔬菜保鲜时间延长 2 倍。</p>
+            <div class="card-meta"><span>⏱ 2 分钟</span><span>👍 990</span></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 快速建议区 -->
+  <section class="quick-tips">
+    <div class="container">
+      <h2 class="section-title">60 秒速效妙招</h2>
+      <div class="tips-grid">
+        <div class="tip-item">
+          <span class="tip-icon">🍵</span>
+          <h4>茶叶除冰箱异味</h4>
+          <p>干茶叶装入纱布袋放入冰箱，一周换一次。</p>
+        </div>
+        <div class="tip-item">
+          <span class="tip-icon">📱</span>
+          <h4>手机屏幕快速消毒</h4>
+          <p>75% 酒精棉片轻擦，30 秒即可，安全不伤屏。</p>
+        </div>
+        <div class="tip-item">
+          <span class="tip-icon">🧦</span>
+          <h4>用旧袜子擦窗户</h4>
+          <p>套在手上喷水擦，比抹布效果好，零成本。</p>
+        </div>
+        <div class="tip-item">
+          <span class="tip-icon">🌱</span>
+          <h4>淘米水浇花</h4>
+          <p>含有机物和矿物质，是天然肥料，植物更茁壮。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo">生活妙招</span>
+        <p>每天一个小技巧，让生活更美好。</p>
+      </div>
+      <div class="footer-links">
+        <h5>内容</h5>
+        <a href="#">最新文章</a>
+        <a href="#">热门推荐</a>
+        <a href="#">分类浏览</a>
+      </div>
+      <div class="footer-links">
+        <h5>关于</h5>
+        <a href="#">关于我们</a>
+        <a href="#">投稿合作</a>
+        <a href="#">隐私政策</a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2026 生活妙招. All rights reserved.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
