@@ -1,6 +1,14 @@
 import { query } from './db';
 import { Article, ArticlePreview } from './types';
 
+// 辅助函数：将 Date 对象转换为 YYYY-MM-DD 字符串
+function formatDate(date: any): string {
+  if (date instanceof Date) {
+    return date.toISOString().split('T')[0];
+  }
+  return String(date);
+}
+
 // 获取所有文章（首页用）
 export async function getAllArticles(): Promise<ArticlePreview[]> {
   const rows = await query(`
@@ -23,7 +31,7 @@ export async function getAllArticles(): Promise<ArticlePreview[]> {
     readTime: row.read_time,
     likes: row.likes,
     author: row.author,
-    publishDate: row.publish_date,
+    publishDate: formatDate(row.publish_date),
   }));
 }
 
@@ -51,10 +59,10 @@ export async function getArticle(category: string, slug: string): Promise<Articl
     readTime: row.read_time,
     likes: row.likes,
     author: row.author,
-    publishDate: row.publish_date,
+    publishDate: formatDate(row.publish_date),
     body: row.body,
-    createdAt: row.created_at,
-    updatedAt: row.updated_at,
+    createdAt: row.created_at ? formatDate(row.created_at) : undefined,
+    updatedAt: row.updated_at ? formatDate(row.updated_at) : undefined,
   };
 }
 
@@ -83,6 +91,6 @@ export async function getRelatedArticles(category: string, excludeId: string): P
     readTime: row.read_time,
     likes: row.likes,
     author: row.author,
-    publishDate: row.publish_date,
+    publishDate: formatDate(row.publish_date),
   }));
 }
