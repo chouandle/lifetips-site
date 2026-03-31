@@ -1,17 +1,17 @@
-import { sql } from './db';
+import { query } from './db';
 import { Article, ArticlePreview } from './types';
 
 // 获取所有文章（首页用）
 export async function getAllArticles(): Promise<ArticlePreview[]> {
-  const result = await sql`
+  const rows = await query(`
     SELECT
       id, slug, category, category_label, title, summary,
       icon, icon_bg, read_time, likes, author, publish_date
     FROM articles
     ORDER BY publish_date DESC
-  `;
+  `);
 
-  return result.map((row: any) => ({
+  return rows.map((row: any) => ({
     id: row.id,
     slug: row.slug,
     category: row.category,
@@ -29,17 +29,16 @@ export async function getAllArticles(): Promise<ArticlePreview[]> {
 
 // 根据分类和 slug 获取单篇文章
 export async function getArticle(category: string, slug: string): Promise<Article | null> {
-  const result = await sql`
-    SELECT * FROM articles
-    WHERE category = ${category} AND slug = ${slug}
-    LIMIT 1
-  `;
+  const rows = await query(
+    'SELECT * FROM articles WHERE category = $1 AND slug = $2 LIMIT 1',
+    [category, slug]
+  );
 
-  if (result.length === 0) {
+  if (rows.length === 0) {
     return null;
   }
 
-  const row = result[0];
+  const row = rows[0];
   return {
     id: row.id,
     slug: row.slug,
@@ -61,17 +60,18 @@ export async function getArticle(category: string, slug: string): Promise<Articl
 
 // 获取相关文章（同分类，排除当前文章）
 export async function getRelatedArticles(category: string, excludeId: string): Promise<ArticlePreview[]> {
-  const result = await sql`
-    SELECT
+  const rows = await query(
+    `SELECT
       id, slug, category, category_label, title, summary,
       icon, icon_bg, read_time, likes, author, publish_date
     FROM articles
-    WHERE category = ${category} AND id != ${excludeId}
+    WHERE category = $1 AND id != $2
     ORDER BY publish_date DESC
-    LIMIT 3
-  `;
+    LIMIT 3`,
+    [category, excludeId]
+  );
 
-  return result.map((row: any) => ({
+  return rows.map((row: any) => ({
     id: row.id,
     slug: row.slug,
     category: row.category,
