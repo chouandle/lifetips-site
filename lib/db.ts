@@ -30,9 +30,13 @@ const sql = neon(getDatabaseUrl());
 
 export async function query(text: string, params?: any[]): Promise<any> {
   try {
-    // Neon serverless driver 自动处理参数化查询
-    const result = await sql(text, params);
-    return result;
+    // 使用 Neon 的 query 方法处理参数化查询
+    if (params && params.length > 0) {
+      return await sql.query(text, params);
+    } else {
+      // 无参数的查询直接执行
+      return await sql.query(text);
+    }
   } catch (error) {
     console.error('Database query error:', error);
     throw error;
