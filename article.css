@@ -1,0 +1,82 @@
+/* 文章页面专用样式 */
+.article-header {
+  background: linear-gradient(135deg, #e0f7f7 0%, #fff8f0 100%);
+  padding: 40px 20px;
+  text-align: center;
+}
+.breadcrumb { font-size: .85rem; color: #666; margin-bottom: 16px; }
+.breadcrumb a { color: #00a8a8; }
+.article-title { font-size: 2rem; font-weight: 700; color: #1a1a1a; margin-bottom: 16px; }
+.article-meta {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: .87rem;
+  color: #999;
+}
+.article-meta span { display: flex; align-items: center; gap: 6px; }
+
+.article-content {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+.article-body {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.06);
+  line-height: 1.8;
+  color: #333;
+}
+.article-body h2 {
+  font-size: 1.4rem;
+  color: #1a1a1a;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #00a8a8;
+}
+.article-body h2:first-child { margin-top: 0; }
+.article-body p { margin-bottom: 16px; }
+.article-body ol, .article-body ul { margin-bottom: 20px; padding-left: 24px; }
+.article-body li { margin-bottom: 8px; }
+.article-body strong { color: #00a8a8; font-weight: 600; }
+.article-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+.article-body th, .article-body td { padding: 12px 16px; text-align: left; border-bottom: 1px solid #eee; }
+.article-body th { background: #f8f9fb; font-weight: 600; color: #555; font-size: .9rem; }
+.article-body tr:last-child td { border-bottom: none; }
+.article-body tr:hover td { background: #fafafa; }
+
+.related-articles { background: #f8f9fb; padding: 48px 20px; }
+.related-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.related-card {
+  display: block;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+  transition: transform .2s, box-shadow .2s;
+  color: inherit;
+}
+.related-card:hover { transform: translateY(-4px); box-shadow: 0 6px 20px rgba(0,0,0,.1); }
+.related-card h4 { font-size: 1rem; color: #1a1a1a; margin: 8px 0; }
+.related-card p { font-size: .85rem; color: #666; }
+
+@media (max-width: 600px) {
+  .article-title { font-size: 1.5rem; }
+  .article-body { padding: 24px 20px; }
+}

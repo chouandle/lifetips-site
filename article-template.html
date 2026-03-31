@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>文章标题 - 生活妙招</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* 文章页面专用样式 */
+    .article-header {
+      background: linear-gradient(135deg, #e0f7f7 0%, #fff8f0 100%);
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .breadcrumb {
+      font-size: .85rem;
+      color: #666;
+      margin-bottom: 16px;
+    }
+    .breadcrumb a { color: #00a8a8; }
+    .article-title { font-size: 2rem; font-weight: 700; color: #1a1a1a; margin-bottom: 16px; }
+    .article-meta {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-size: .87rem;
+      color: #999;
+      margin-bottom: 20px;
+    }
+    .article-meta span { display: flex; align-items: center; gap: 6px; }
+
+    /* 文章内容区域 */
+    .article-content {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.06);
+      overflow: hidden;
+    }
+    .article-body {
+      padding: 40px;
+      line-height: 1.8;
+      color: #333;
+    }
+    .article-body h2 {
+      font-size: 1.4rem;
+      color: #1a1a1a;
+      margin: 32px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #00a8a8;
+    }
+    .article-body p { margin-bottom: 16px; }
+    .article-body ol, .article-body ul { margin-bottom: 20px; padding-left: 24px; }
+    .article-body li { margin-bottom: 8px; }
+    .article-body strong { color: #00a8a8; font-weight: 600; }
+    .article-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,.04);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .article-body th, .article-body td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
+    .article-body th { background: #f8f9fb; font-weight: 600; color: #555; }
+    .article-body tr:hover td { background: #fafafa; }
+
+    /* 相关文章 */
+    .related-articles {
+      background: #f8f9fb;
+      padding: 40px 20px;
+    }
+    .related-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .related-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.06);
+      transition: transform .2s;
+    }
+    .related-card:hover { transform: translateY(-4px); }
+    .related-card h4 { font-size: 1rem; color: #1a1a1a; margin-bottom: 8px; }
+    .related-card p { font-size: .85rem; color: #666; }
+
+    @media (max-width: 600px) {
+      .article-title { font-size: 1.6rem; }
+      .article-body { padding: 24px; }
+      .related-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 顶部导航（复用首页导航）-->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="../index.html" class="logo">生活妙招</a>
+      <nav class="nav-links">
+        <a href="../index.html">最新</a>
+        <a href="../index.html#articles">分类</a>
+        <a href="#">精选</a>
+        <a href="#">关于</a>
+      </nav>
+      <button class="nav-toggle" aria-label="菜单">☰</button>
+    </div>
+  </header>
+
+  <!-- 文章头部 -->
+  <section class="article-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">首页</a> / <a href="../index.html" id="category-link">分类</a> / <span id="article-title-breadcrumb">文章</span>
+      </div>
+      <h1 class="article-title" id="article-title">加载中...</h1>
+      <div class="article-meta">
+        <span>📝 <span id="article-author">作者</span></span>
+        <span>📅 <span id="publish-date">发布日期</span></span>
+        <span>⏱ <span id="read-time">阅读时间</span></span>
+        <span>👍 <span id="likes-count">点赞数</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 文章内容（动态插入）-->
+  <article class="article-content">
+    <div class="article-body" id="article-body">
+      正在加载文章内容...
+    </div>
+  </article>
+
+  <!-- 相关文章 -->
+  <section class="related-articles">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;margin-bottom:32px;color:#1a1a1a;">相关推荐</h2>
+      <div class="related-grid" id="related-articles">
+        <!-- 动态插入相关文章 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚（复用首页页脚）-->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo">生活妙招</span>
+        <p>每天一个小技巧，让生活更美好。</p>
+      </div>
+      <div class="footer-links">
+        <h5>内容</h5>
+        <a href="../index.html">最新文章</a>
+        <a href="../index.html#articles">热门推荐</a>
+        <a href="../index.html#articles">分类浏览</a>
+      </div>
+      <div class="footer-links">
+        <h5>关于</h5>
+        <a href="#">关于我们</a>
+        <a href="#">投稿合作</a>
+        <a href="#">隐私政策</a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2026 生活妙招. All rights reserved.</p>
+  </footer>
+
+  <script src="../main.js"></script>
+  <script>
+    // 动态加载文章内容
+    async function loadArticle() {
+      try {
+        // 从 URL 获取文章 ID
+        const urlParts = window.location.pathname.split('/');
+        const articleId = urlParts[urlParts.length - 1].replace('.html', '');
+
+        // 加载文章数据
+        const response = await fetch('../data/articles.json');
+        const data = await response.json();
+        const article = data.articles.find(a => a.slug === articleId);
+
+        if (!article) {
+          document.getElementById('article-body').innerHTML = '<p>文章未找到。<a href="../index.html">返回首页</a></p>';
+          return;
+        }
+
+        // 更新页面标题和元信息
+        document.title = article.title + ' - 生活妙招';
+        document.getElementById('article-title').textContent = article.title;
+        document.getElementById('article-title-breadcrumb').textContent = article.title;
+        document.getElementById('category-link').textContent = article.categoryLabel;
+        document.getElementById('article-author').textContent = article.author;
+        document.getElementById('publish-date').textContent = article.publishDate;
+        document.getElementById('read-time').textContent = article.readTime + ' 分钟';
+        document.getElementById('likes-count').textContent = article.likes;
+
+        // 插入文章正文 HTML
+        document.getElementById('article-body').innerHTML = article.body;
+
+        // 加载相关文章（同类别）
+        loadRelatedArticles(data.articles, article.category, article.id);
+
+      } catch (error) {
+        console.error('加载文章失败:', error);
+        document.getElementById('article-body').innerHTML = '<p>加载失败，请稍后重试。<a href="../index.html">返回首页</a></p>';
+      }
+    }
+
+    // 加载相关文章
+    function loadRelatedArticles(allArticles, currentCategory, currentId) {
+      const relatedArticles = allArticles
+        .filter(a => a.category === currentCategory && a.id !== currentId)
+        .slice(0, 3);
+
+      const relatedContainer = document.getElementById('related-articles');
+
+      if (relatedArticles.length === 0) {
+        relatedContainer.innerHTML = '<p style="text-align:center;color:#666;">暂无相关文章</p>';
+        return;
+      }
+
+      relatedContainer.innerHTML = relatedArticles.map(article => `
+        <a href="${article.slug}.html" class="related-card">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+            <span style="font-size:1.5rem;">${article.icon}</span>
+            <span style="font-size:.75rem;color:#00a8a8;font-weight:600;">${article.categoryLabel}</span>
+          </div>
+          <h4>${article.title}</h4>
+          <p>${article.summary}</p>
+        </a>
+      `).join('');
+    }
+
+    // 页面加载后执行
+    document.addEventListener('DOMContentLoaded', loadArticle);
+  </script>
+</body>
+</html>

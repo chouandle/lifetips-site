@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>生活妙招</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../article.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="../index.html" class="logo">生活妙招</a>
+      <nav class="nav-links">
+        <a href="../index.html">最新</a>
+        <a href="../index.html#articles">分类</a>
+        <a href="#">精选</a>
+        <a href="#">关于</a>
+      </nav>
+      <button class="nav-toggle" aria-label="菜单">☰</button>
+    </div>
+  </header>
+  <section class="article-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../index.html" id="category-link">分类</a> / <span id="article-title-breadcrumb"></span></div>
+      <h1 class="article-title" id="article-title">加载中...</h1>
+      <div class="article-meta">
+        <span>📝 <span id="article-author"></span></span>
+        <span>📅 <span id="publish-date"></span></span>
+        <span>⏱ <span id="read-time"></span></span>
+        <span>👍 <span id="likes-count"></span></span>
+      </div>
+    </div>
+  </section>
+  <article class="article-content">
+    <div class="article-body" id="article-body">正在加载...</div>
+  </article>
+  <section class="related-articles">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;margin-bottom:32px;color:#1a1a1a;">相关推荐</h2>
+      <div class="related-grid" id="related-articles"></div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand"><span class="logo">生活妙招</span><p>每天一个小技巧，让生活更美好。</p></div>
+      <div class="footer-links"><h5>内容</h5><a href="../index.html">最新文章</a><a href="../index.html#articles">分类浏览</a></div>
+      <div class="footer-links"><h5>关于</h5><a href="#">关于我们</a><a href="#">隐私政策</a></div>
+    </div>
+    <p class="footer-copy">© 2026 生活妙招. All rights reserved.</p>
+  </footer>
+  <script src="../main.js"></script>
+  <script src="../article.js"></script>
+  <script>loadArticle('salt-water-vegetables', '../');</script>
+</body>
+</html>
