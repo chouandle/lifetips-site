@@ -1,41 +1,40 @@
-import { Pool } from 'pg';
+import { neon } from '@neondatabase/serverless';
 
-// 在 Vercel 部署时，框架会自动注入 DATABASE_URL
-// 如果没有 DATABASE_URL，说明在本地开发，尝试构造连接
-function getConnectionConfig() {
+// 构建 DATABASE_URL
+function getDatabaseUrl(): string {
+  // 优先使用 DATABASE_URL 环境变量
   if (process.env.DATABASE_URL) {
-    // 生产环境：Vercel 自动注入的完整连接字符串
-    return { connectionString: process.env.DATABASE_URL };
+    return process.env.DATABASE_URL;
   }
 
-  // 开发环境：使用分离的环境变量
-  return {
-    host: process.env.PGHOST,
-    port: parseInt(process.env.PGPORT || '5432'),
-    database: process.env.PGDATABASE,
-    user: process.env.PGUSER,
-    // 本地开发时需要通过 AWS CLI 获取临时密码
-    // password 在运行时会被 Vercel 自动注入
-    ssl: { rejectUnauthorized: false },
-  };
+  // 从单独的环境变量构建连接字符串
+  const {
+    PGUSER = 'postgres',
+    PGPASSWORD = '',
+    PGHOST,
+    PGPORT = '5432',
+    PGDATABASE = 'postgres',
+  } = process.env;
+
+  if (!PGHOST) {
+    throw new Error('Database configuration missing: PGHOST or DATABASE_URL is required');
+  }
+
+  // 构建 PostgreSQL 连接字符串
+  const password = PGPASSWORD ? `:${PGPASSWORD}` : '';
+  return `postgresql://${PGUSER}${password}@${PGHOST}:${PGPORT}/${PGDATABASE}?sslmode=require`;
 }
 
-let pool: Pool | null = null;
-
-export async function getPool(): Promise<Pool> {
-  if (pool) return pool;
-
-  pool = new Pool({
-    ...getConnectionConfig(),
-    max: 10,
-    idleTimeoutMillis: 30000,
-  });
-
-  return pool;
-}
+// 使用 Neon serverless driver - 自动连接池管理，适合 serverless 环境
+const sql = neon(getDatabaseUrl());
 
 export async function query(text: string, params?: any[]): Promise<any> {
-  const p = await getPool();
-  const result = await p.query(text, params);
-  return result.rows;
+  try {
+    // Neon serverless driver 自动处理参数化查询
+    const result = await sql(text, params);
+    return result;
+  } catch (error) {
+    console.error('Database query error:', error);
+    throw error;
+  }
 }
