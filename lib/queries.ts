@@ -9,13 +9,14 @@ function formatDate(date: any): string {
   return String(date);
 }
 
-// 获取所有文章（首页用）
+// 获取所有文章（首页用）- 只显示英文文章
 export async function getAllArticles(): Promise<ArticlePreview[]> {
   const rows = await query(`
     SELECT
       id, slug, category, category_label, title, summary,
       icon, icon_bg, read_time, likes, author, publish_date
     FROM articles
+    WHERE category IN ('sourcing', 'platforms', 'logistics', 'negotiation', 'trends')
     ORDER BY publish_date DESC
   `);
 
