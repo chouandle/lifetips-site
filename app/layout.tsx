@@ -4,8 +4,8 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "生活妙招 - 让生活更简单",
-  description: "收录厨房、收纳、清洁、健康等各类实用小技巧，助你轻松应对日常生活",
+  title: "SourceSmart – B2B Buying Tips & Ecommerce Guides",
+  description: "Expert guides on supplier sourcing, B2B platforms, logistics, and negotiation tactics for buyers and sellers.",
 };
 
 export default function RootLayout({
@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-CN">
+    <html lang="en">
       <body className="min-h-screen bg-[#f8f9fb] antialiased">
         <Header />
         <main>{children}</main>

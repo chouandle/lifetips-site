@@ -16,7 +16,7 @@ export interface Article {
   updatedAt?: string;
 }
 
-export type Category = 'kitchen' | 'storage' | 'clean' | 'health' | 'diy' | 'all';
+export type Category = 'sourcing' | 'platforms' | 'logistics' | 'negotiation' | 'trends' | 'all';
 
 export interface ArticlePreview {
   id: string;

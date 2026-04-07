@@ -2,32 +2,32 @@ export function HeroSection() {
   return (
     <section className="bg-gradient-to-br from-teal-50 to-orange-50 py-20 px-5">
       <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-16">
-        {/* 文案 */}
+        {/* Copy */}
         <div className="max-w-md">
           <span className="inline-block bg-teal text-white text-xs px-3 py-1 rounded-full mb-4 tracking-wider">
-            每日一招
+            B2B BUYING GUIDE
           </span>
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
-            让生活变得<br />
-            <span className="text-teal">更聪明、更简单</span>
+            Smarter Buying<br />
+            <span className="text-teal">for Serious Sellers</span>
           </h1>
           <p className="text-gray-500 mb-7 leading-relaxed">
-            收录厨房、收纳、清洁、健康等各类实用小技巧，助你轻松应对日常生活。
+            Practical guides on supplier sourcing, B2B platforms, logistics, and negotiation — everything you need to buy better and sell more.
           </p>
           <a
             href="#articles"
             className="inline-block bg-teal text-white px-8 py-3 rounded-full font-semibold hover:bg-teal-700 transition-all hover:-translate-y-0.5"
           >
-            探索技巧
+            Explore Guides
           </a>
         </div>
 
-        {/* 浮动卡片 */}
+        {/* Floating cards */}
         <div className="flex flex-col gap-4">
           {[
-            { icon: '🍋', title: '柠檬去油污', sub: '厨房必备技巧' },
-            { icon: '🧺', title: '收纳空间翻倍', sub: '整理达人秘籍' },
-            { icon: '🌿', title: '天然清洁剂', sub: '环保又省钱' },
+            { icon: '🏭', title: 'Find Verified Suppliers', sub: 'Sourcing & vetting tips' },
+            { icon: '🚢', title: 'Optimize Your Logistics', sub: 'Cut shipping costs' },
+            { icon: '🤝', title: 'Negotiate Better Deals', sub: 'Tactics that actually work' },
           ].map((card) => (
             <div
               key={card.title}

@@ -8,12 +8,12 @@ interface CategoryFilterProps {
 }
 
 const categories = [
-  { key: 'all' as Category, label: '全部' },
-  { key: 'kitchen' as Category, label: '厨房技巧' },
-  { key: 'storage' as Category, label: '收纳整理' },
-  { key: 'clean' as Category, label: '环保清洁' },
-  { key: 'health' as Category, label: '健康生活' },
-  { key: 'diy' as Category, label: '创意 DIY' },
+  { key: 'all' as Category, label: 'All' },
+  { key: 'sourcing' as Category, label: 'Sourcing' },
+  { key: 'platforms' as Category, label: 'Platforms' },
+  { key: 'logistics' as Category, label: 'Logistics' },
+  { key: 'negotiation' as Category, label: 'Negotiation' },
+  { key: 'trends' as Category, label: 'Trends' },
 ];
 
 export function CategoryFilter({ onFilterChange }: CategoryFilterProps) {

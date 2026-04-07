@@ -44,7 +44,7 @@ export function ArticleGrid({ articles }: ArticleGridProps) {
                   {article.summary}
                 </p>
                 <div className="flex gap-4 text-xs text-gray-400">
-                  <span>⏱ {article.readTime} 分钟</span>
+                  <span>⏱ {article.readTime} min read</span>
                   <span>👍 {article.likes}</span>
                 </div>
               </div>

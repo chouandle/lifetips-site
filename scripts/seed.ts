@@ -21,8 +21,8 @@ interface ArticleData {
 async function seed() {
   // 检查环境变量
   if (!process.env.DATABASE_URL) {
-    console.error('❌ DATABASE_URL 环境变量未设置');
-    console.log('请先运行: vercel env pull');
+    console.error('❌ DATABASE_URL environment variable is not set');
+    console.log('Run: vercel env pull');
     process.exit(1);
   }
 
@@ -34,13 +34,13 @@ async function seed() {
     const articlesFile = fs.readFileSync(articlesPath, 'utf-8');
     const { articles } = JSON.parse(articlesFile) as { articles: ArticleData[] };
 
-    console.log(`📖 读取到 ${articles.length} 篇文章`);
+    console.log(`📖 Found ${articles.length} articles`);
 
-    // 清理现有数据
+    // Clear existing data
     await sql`DELETE FROM articles`;
-    console.log('🗑️  清空 articles 表');
+    console.log('🗑️  Cleared articles table');
 
-    // 插入数据
+    // Insert data
     for (const article of articles) {
       await sql`
         INSERT INTO articles (
@@ -62,15 +62,15 @@ async function seed() {
           ${article.body}
         )
       `;
-      console.log(`✅ 插入文章: ${article.title}`);
+      console.log(`✅ Inserted: ${article.title}`);
     }
 
-    // 验证结果
+    // Verify
     const count = await sql`SELECT COUNT(*) as count FROM articles`;
-    console.log(`\n🎉 成功导入 ${count[0].count} 篇文章到数据库！`);
+    console.log(`\n🎉 Successfully imported ${count[0].count} articles!`);
 
   } catch (error) {
-    console.error('❌ Seed 失败:', error);
+    console.error('❌ Seed failed:', error);
     process.exit(1);
   }
 }

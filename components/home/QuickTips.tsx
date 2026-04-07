@@ -1,15 +1,15 @@
 const tips = [
-  { icon: '🍵', title: '茶叶除冰箱异味', desc: '干茶叶装入纱布袋放入冰箱，一周换一次。' },
-  { icon: '📱', title: '手机屏幕快速消毒', desc: '75% 酒精棉片轻擦，30 秒即可，安全不伤屏。' },
-  { icon: '🧦', title: '用旧袜子擦窗户', desc: '套在手上喷水擦，比抹布效果好，零成本。' },
-  { icon: '🌱', title: '淘米水浇花', desc: '含有机物和矿物质，是天然肥料，植物更茁壮。' },
+  { icon: '🔍', title: 'Verify Suppliers Fast', desc: 'Check business licenses, certifications, and factory audits in 5 minutes.' },
+  { icon: '💰', title: 'Cut Shipping Costs 40%', desc: 'Use DDP for small orders, consolidate with freight forwarders for bulk.' },
+  { icon: '📊', title: 'Compare Platform Fees', desc: 'Alibaba vs. Global Sources vs. Made-in-China — which saves you more?' },
+  { icon: '⚡', title: 'Speed Up Sample Orders', desc: 'Request samples via express couriers, not regular shipping (saves 2 weeks).' },
 ];
 
 export function QuickTips() {
   return (
     <section className="bg-gradient-to-br from-teal to-teal-dark py-16 px-5 text-white">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl font-bold text-center mb-9">60 秒速效妙招</h2>
+        <h2 className="text-2xl font-bold text-center mb-9">Quick Wins</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {tips.map((tip) => (
             <div

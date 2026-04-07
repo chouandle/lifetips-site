@@ -11,7 +11,7 @@ export function RelatedArticles({ articles }: RelatedArticlesProps) {
   return (
     <section className="bg-gray-50 py-12 px-5">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl font-bold text-gray-900 text-center mb-8">相关推荐</h2>
+        <h2 className="text-2xl font-bold text-gray-900 text-center mb-8">Related Articles</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {articles.map((article) => (
             <Link
