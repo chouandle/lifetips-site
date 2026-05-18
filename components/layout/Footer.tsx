@@ -1,1 +1,22 @@
-{"data":"aW1wb3J0IExpbmsgZnJvbSAnbmV4dC9saW5rJzsKCmV4cG9ydCBmdW5jdGlvbiBGb290ZXIoKSB7CiAgcmV0dXJuICgKICAgIDxmb290ZXIgY2xhc3NOYW1lPSJzaXRlLWZvb3RlciI+CiAgICAgIDxkaXYgY2xhc3NOYW1lPSJmb290ZXItY29udGVudCI+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZvb3Rlci1sb2dvIj4KICAgICAgICAgIDxzcGFuPkxpZmVUaXBzPC9zcGFuPgogICAgICAgIDwvZGl2PgogICAgICAgIDxuYXYgY2xhc3NOYW1lPSJmb290ZXItbmF2Ij4KICAgICAgICAgIDx1bD4KICAgICAgICAgICAgPGxpPjxMaW5rIGhyZWY9Ii8iPkhvbWU8L0xpbms+PC9saT4KICAgICAgICAgICAgPGxpPjxMaW5rIGhyZWY9Ii8jYXJ0aWNsZXMiPkNhdGVnb3JpZXM8L0xpbms+PC9saT4KICAgICAgICAgICAgPGxpPjxMaW5rIGhyZWY9IiMiPkFib3V0PC9MaW5rPjwvbGk+CiAgICAgICAgICAgIDxsaT48TGluayBocmVmPSIjIj5Qcml2YWN5IFBvbGljeTwvTGluaz48L2xpPgogICAgICAgICAgPC91bD4KICAgICAgICA8L25hdj4KICAgICAgICA8cCBjbGFzc05hbWU9ImNvcHlyaWdodCI+JmNvcHk7IDIwMjYgTGlmZVRpcHMuIEFsbCByaWdodHMgcmVzZXJ2ZWQuPC9wPgogICAgICA8L2Rpdj4KICAgIDwvZm9vdGVyPgogICk7Cn0K"}
+import Link from 'next/link';
+
+export function Footer() {
+  return (
+    <footer className="site-footer">
+      <div className="footer-content">
+        <div className="footer-logo">
+          <span>LifeTips</span>
+        </div>
+        <nav className="footer-nav">
+          <ul>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/#articles">Categories</Link></li>
+            <li><Link href="#">About</Link></li>
+            <li><Link href="#">Privacy Policy</Link></li>
+          </ul>
+        </nav>
+        <p className="copyright">&copy; 2026 LifeTips. All rights reserved.</p>
+      </div>
+    </footer>
+  );
+}

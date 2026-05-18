@@ -1,1 +1,17 @@
-{"data":"aW50ZXJmYWNlIEFydGljbGVCb2R5UHJvcHMgewogIGJvZHk6IHN0cmluZzsKfQoKZnVuY3Rpb24gYWRkSGVhZGluZ0lkcyhodG1sOiBzdHJpbmcpOiBzdHJpbmcgewogIHJldHVybiBodG1sLnJlcGxhY2UoLzxoMihbXj5dKik+KC4qPyk8XC9oMj4vZ2ksIChfbWF0Y2gsIGF0dHJzLCBjb250ZW50KSA9PiB7CiAgICBjb25zdCB0ZXh0ID0gY29udGVudC5yZXBsYWNlKC88W14+XSs+L2csICcnKS50cmltKCk7CiAgICBjb25zdCBpZCA9IHRleHQudG9Mb3dlckNhc2UoKS5yZXBsYWNlKC9bXmEtejAtOV0rL2csICctJykucmVwbGFjZSgvXi18LSQvZywgJycpOwogICAgcmV0dXJuIGA8aDIke2F0dHJzfSBpZD0iJHtpZH0iPiR7Y29udGVudH08L2gyPmA7CiAgfSk7Cn0KCmV4cG9ydCBmdW5jdGlvbiBBcnRpY2xlQm9keSh7IGJvZHkgfTogQXJ0aWNsZUJvZHlQcm9wcykgewogIHJldHVybiAoCiAgICA8ZGl2IGNsYXNzTmFtZT0iYXJ0aWNsZS1jb250ZW50IiBkYW5nZXJvdXNseVNldElubmVySFRNTD17eyBfX2h0bWw6IGFkZEhlYWRpbmdJZHMoYm9keSkgfX0gLz4KICApOwp9Cg=="}
+interface ArticleBodyProps {
+  body: string;
+}
+
+function addHeadingIds(html: string): string {
+  return html.replace(/<h2([^>]*)>(.*?)<\/h2>/gi, (_match, attrs, content) => {
+    const text = content.replace(/<[^>]+>/g, '').trim();
+    const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    return `<h2${attrs} id="${id}">${content}</h2>`;
+  });
+}
+
+export function ArticleBody({ body }: ArticleBodyProps) {
+  return (
+    <div className="article-content" dangerouslySetInnerHTML={{ __html: addHeadingIds(body) }} />
+  );
+}

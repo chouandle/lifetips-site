@@ -1,1 +1,71 @@
-{"data":"aW1wb3J0IHsgbm90Rm91bmQgfSBmcm9tICduZXh0L25hdmlnYXRpb24nOwppbXBvcnQgdHlwZSB7IE1ldGFkYXRhIH0gZnJvbSAnbmV4dCc7CmltcG9ydCB7IGdldEFydGljbGUsIGdldFJlbGF0ZWRBcnRpY2xlcyB9IGZyb20gJ0AvbGliL3F1ZXJpZXMnOwppbXBvcnQgeyBBcnRpY2xlSGVhZGVyIH0gZnJvbSAnQC9jb21wb25lbnRzL2FydGljbGUvQXJ0aWNsZUhlYWRlcic7CmltcG9ydCB7IEFydGljbGVCb2R5IH0gZnJvbSAnQC9jb21wb25lbnRzL2FydGljbGUvQXJ0aWNsZUJvZHknOwppbXBvcnQgeyBSZWxhdGVkQXJ0aWNsZXMgfSBmcm9tICdAL2NvbXBvbmVudHMvYXJ0aWNsZS9SZWxhdGVkQXJ0aWNsZXMnOwppbXBvcnQgeyBBcnRpY2xlVG9jIH0gZnJvbSAnQC9jb21wb25lbnRzL2FydGljbGUvQXJ0aWNsZVRvYyc7CgppbnRlcmZhY2UgQXJ0aWNsZVBhZ2VQcm9wcyB7CiAgcGFyYW1zOiBQcm9taXNlPHsKICAgIGNhdGVnb3J5OiBzdHJpbmc7CiAgICBzbHVnOiBzdHJpbmc7CiAgfT47Cn0KCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBnZW5lcmF0ZU1ldGFkYXRhKHsgcGFyYW1zIH06IEFydGljbGVQYWdlUHJvcHMpOiBQcm9taXNlPE1ldGFkYXRhPiB7CiAgY29uc3QgcmVzb2x2ZWRQYXJhbXMgPSBhd2FpdCBwYXJhbXM7CiAgY29uc3QgYXJ0aWNsZSA9IGF3YWl0IGdldEFydGljbGUocmVzb2x2ZWRQYXJhbXMuY2F0ZWdvcnksIHJlc29sdmVkUGFyYW1zLnNsdWcpOwoKICBpZiAoIWFydGljbGUpIHsKICAgIHJldHVybiB7IHRpdGxlOiAnQXJ0aWNsZSBOb3QgRm91bmQgLSBMaWZlVGlwcycgfTsKICB9CgogIHJldHVybiB7CiAgICB0aXRsZTogYCR7YXJ0aWNsZS50aXRsZX0gLSBMaWZlVGlwc2AsCiAgICBkZXNjcmlwdGlvbjogYXJ0aWNsZS5kZXNjcmlwdGlvbiwKICB9Owp9CgpleHBvcnQgZGVmYXVsdCBhc3luYyBmdW5jdGlvbiBBcnRpY2xlUGFnZSh7IHBhcmFtcyB9OiBBcnRpY2xlUGFnZVByb3BzKSB7CiAgY29uc3QgcmVzb2x2ZWRQYXJhbXMgPSBhd2FpdCBwYXJhbXM7CiAgY29uc3QgYXJ0aWNsZSA9IGF3YWl0IGdldEFydGljbGUocmVzb2x2ZWRQYXJhbXMuY2F0ZWdvcnksIHJlc29sdmVkUGFyYW1zLnNsdWcpOwoKICBpZiAoIWFydGljbGUpIHsKICAgIG5vdEZvdW5kKCk7CiAgfQoKICBjb25zdCByZWxhdGVkQXJ0aWNsZXMgPSBhd2FpdCBnZXRSZWxhdGVkQXJ0aWNsZXMoYXJ0aWNsZS50eXBlLCBhcnRpY2xlLmlkKTsKCiAgcmV0dXJuICgKICAgIDxkaXYgY2xhc3NOYW1lPSJhcnRpY2xlLWxheW91dCI+CiAgICAgIDxtYWluIGNsYXNzTmFtZT0iYXJ0aWNsZS1tYWluIj4KICAgICAgICA8YXJ0aWNsZSBjbGFzc05hbWU9ImFydGljbGUtY29udGFpbmVyIj4KICAgICAgICAgIDxBcnRpY2xlSGVhZGVyIGFydGljbGU9e2FydGljbGV9IC8+CiAgICAgICAgICA8QXJ0aWNsZUJvZHkgYm9keT17YXJ0aWNsZS5ib2R5fSAvPgogICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImF1dGhvci1zZWN0aW9uLWNhcmQiPgogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iYXV0aG9yLWF2YXRhci1jb250YWluZXIiPgogICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJhdXRob3ItYXZhdGFyIiBzdHlsZT17ewogICAgICAgICAgICAgICAgZGlzcGxheTogJ2ZsZXgnLCBhbGlnbkl0ZW1zOiAnY2VudGVyJywganVzdGlmeUNvbnRlbnQ6ICdjZW50ZXInLAogICAgICAgICAgICAgICAgZm9udFNpemU6ICcycmVtJywgYmFja2dyb3VuZENvbG9yOiAnI2UwZjdmNycsIGNvbG9yOiAnIzAwYThhOCcsCiAgICAgICAgICAgICAgfX0+CiAgICAgICAgICAgICAgICB7YXJ0aWNsZS5hdXRob3IgPyBhcnRpY2xlLmF1dGhvci5jaGFyQXQoMCkudG9VcHBlckNhc2UoKSA6ICc/J30KICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJhdXRob3ItaW5mbyI+CiAgICAgICAgICAgICAgPGgzPnthcnRpY2xlLmF1dGhvciB8fCAnTGlmZVRpcHMgVGVhbSd9PC9oMz4KICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9ImF1dGhvci1iaW8iPgogICAgICAgICAgICAgICAgQ29udHJpYnV0aW5nIHdyaXRlciBhdCBMaWZlVGlwcywgc2hhcmluZyBwcmFjdGljYWwgZXZlcnlkYXkgdGlwcyB0byBtYWtlIHlvdXIgaG9tZSBsaWZlIHNpbXBsZXIsIGNsZWFuZXIsIGFuZCBtb3JlIGpveWZ1bC4KICAgICAgICAgICAgICA8L3A+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9hcnRpY2xlPgogICAgICA8L21haW4+CgogICAgICA8YXNpZGUgY2xhc3NOYW1lPSJhcnRpY2xlLXNpZGViYXIiPgogICAgICAgIDxBcnRpY2xlVG9jIGJvZHk9e2FydGljbGUuYm9keX0gLz4KICAgICAgICA8UmVsYXRlZEFydGljbGVzIGFydGljbGVzPXtyZWxhdGVkQXJ0aWNsZXN9IC8+CiAgICAgIDwvYXNpZGU+CiAgICA8L2Rpdj4KICApOwp9Cg=="}
+import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
+import { getArticle, getRelatedArticles } from '@/lib/queries';
+import { ArticleHeader } from '@/components/article/ArticleHeader';
+import { ArticleBody } from '@/components/article/ArticleBody';
+import { RelatedArticles } from '@/components/article/RelatedArticles';
+import { ArticleToc } from '@/components/article/ArticleToc';
+
+interface ArticlePageProps {
+  params: Promise<{
+    category: string;
+    slug: string;
+  }>;
+}
+
+export async function generateMetadata({ params }: ArticlePageProps): Promise<Metadata> {
+  const resolvedParams = await params;
+  const article = await getArticle(resolvedParams.category, resolvedParams.slug);
+
+  if (!article) {
+    return { title: 'Article Not Found - LifeTips' };
+  }
+
+  return {
+    title: `${article.title} - LifeTips`,
+    description: article.description,
+  };
+}
+
+export default async function ArticlePage({ params }: ArticlePageProps) {
+  const resolvedParams = await params;
+  const article = await getArticle(resolvedParams.category, resolvedParams.slug);
+
+  if (!article) {
+    notFound();
+  }
+
+  const relatedArticles = await getRelatedArticles(article.type, article.id);
+
+  return (
+    <div className="article-layout">
+      <main className="article-main">
+        <article className="article-container">
+          <ArticleHeader article={article} />
+          <ArticleBody body={article.body} />
+          <div className="author-section-card">
+            <div className="author-avatar-container">
+              <div className="author-avatar" style={{
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                fontSize: '2rem', backgroundColor: '#e0f7f7', color: '#00a8a8',
+              }}>
+                {article.author ? article.author.charAt(0).toUpperCase() : '?'}
+              </div>
+            </div>
+            <div className="author-info">
+              <h3>{article.author || 'LifeTips Team'}</h3>
+              <p className="author-bio">
+                Contributing writer at LifeTips, sharing practical everyday tips to make your home life simpler, cleaner, and more joyful.
+              </p>
+            </div>
+          </div>
+        </article>
+      </main>
+
+      <aside className="article-sidebar">
+        <ArticleToc body={article.body} />
+        <RelatedArticles articles={relatedArticles} />
+      </aside>
+    </div>
+  );
+}

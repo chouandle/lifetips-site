@@ -1,1 +1,25 @@
-{"data":"aW1wb3J0IHR5cGUgeyBNZXRhZGF0YSB9IGZyb20gIm5leHQiOwppbXBvcnQgIi4vZ2xvYmFscy5jc3MiOwppbXBvcnQgeyBIZWFkZXIgfSBmcm9tICJAL2NvbXBvbmVudHMvbGF5b3V0L0hlYWRlciI7CmltcG9ydCB7IEZvb3RlciB9IGZyb20gIkAvY29tcG9uZW50cy9sYXlvdXQvRm9vdGVyIjsKCmV4cG9ydCBjb25zdCBtZXRhZGF0YTogTWV0YWRhdGEgPSB7CiAgdGl0bGU6ICJMaWZlVGlwcyB8IFNtYXJ0IFNvbHV0aW9ucyBmb3IgRXZlcnlkYXkgTGl2aW5nIiwKICBkZXNjcmlwdGlvbjogIkxpZmVUaXBzOiBTbWFydCwgc2NpZW5jZS1iYWNrZWQgbGlmZSBoYWNrcyBmb3IgaG9tZSwga2l0Y2hlbiwgY2xlYW5pbmcsIG9yZ2FuaXphdGlvbiAmIHdlbGxuZXNzIOKAlCBzaW1wbGUgNjAtc2Vjb25kIGZpeGVzIGFuZCBpbi1kZXB0aCBndWlkZXMgdG8gbWFrZSBldmVyeWRheSBsaXZpbmcgZWFzaWVyLCBncmVlbmVyLCBhbmQgbW9yZSBqb3lmdWwuIiwKfTsKCmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIFJvb3RMYXlvdXQoewogIGNoaWxkcmVuLAp9OiBSZWFkb25seTx7CiAgY2hpbGRyZW46IFJlYWN0LlJlYWN0Tm9kZTsKfT4pIHsKICByZXR1cm4gKAogICAgPGh0bWwgbGFuZz0iZW4iPgogICAgICA8Ym9keT4KICAgICAgICA8SGVhZGVyIC8+CiAgICAgICAgPG1haW4+e2NoaWxkcmVufTwvbWFpbj4KICAgICAgICA8Rm9vdGVyIC8+CiAgICAgIDwvYm9keT4KICAgIDwvaHRtbD4KICApOwp9Cg=="}
+import type { Metadata } from "next";
+import "./globals.css";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+
+export const metadata: Metadata = {
+  title: "LifeTips | Smart Solutions for Everyday Living",
+  description: "LifeTips: Smart, science-backed life hacks for home, kitchen, cleaning, organization & wellness — simple 60-second fixes and in-depth guides to make everyday living easier, greener, and more joyful.",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </body>
+    </html>
+  );
+}

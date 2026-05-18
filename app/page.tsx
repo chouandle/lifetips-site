@@ -1,14 +1,17 @@
-import { getAllArticles } from '@/lib/queries';
+import { getAllArticles, getFeaturedArticle } from '@/lib/queries';
 import { HeroSection } from '@/components/home/HeroSection';
 import { ArticleGrid } from '@/components/home/ArticleGrid';
 import { QuickTips } from '@/components/home/QuickTips';
 
 export default async function HomePage() {
-  const articles = await getAllArticles();
+  const [articles, featured] = await Promise.all([
+    getAllArticles(),
+    getFeaturedArticle(),
+  ]);
 
   return (
     <>
-      <HeroSection />
+      <HeroSection featured={featured} />
       <ArticleGrid articles={articles} />
       <QuickTips />
     </>

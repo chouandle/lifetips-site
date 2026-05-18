@@ -1,1 +1,58 @@
-{"data":"aW1wb3J0IHsgbm90Rm91bmQgfSBmcm9tICduZXh0L25hdmlnYXRpb24nOwppbXBvcnQgTGluayBmcm9tICduZXh0L2xpbmsnOwppbXBvcnQgdHlwZSB7IE1ldGFkYXRhIH0gZnJvbSAnbmV4dCc7CmltcG9ydCB7IGdldEFydGljbGVzQnlUeXBlIH0gZnJvbSAnQC9saWIvcXVlcmllcyc7Cgpjb25zdCBjYXRlZ29yeUxhYmVsczogUmVjb3JkPHN0cmluZywgc3RyaW5nPiA9IHsKICAna2l0Y2hlbi1oYWNrcyc6ICdLaXRjaGVuIEhhY2tzJywKICAnY2xvc2V0LW9yZ2FuaXphdGlvbic6ICdDbG9zZXQgT3JnYW5pemF0aW9uJywKICAnZWNvLWNsZWFuaW5nJzogJ0Vjby1DbGVhbmluZycsCiAgJ3BsYW50LWNhcmUnOiAnUGxhbnQgQ2FyZScsCiAgJ2xhdW5kcnktc2VjcmV0cyc6ICdMYXVuZHJ5IFNlY3JldHMnLAogICd0ZWNoLWVmZmljaWVuY3knOiAnVGVjaCBFZmZpY2llbmN5JywKfTsKCmludGVyZmFjZSBQcm9wcyB7CiAgcGFyYW1zOiBQcm9taXNlPHsgY2F0ZWdvcnk6IHN0cmluZyB9PjsKfQoKZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGdlbmVyYXRlTWV0YWRhdGEoeyBwYXJhbXMgfTogUHJvcHMpOiBQcm9taXNlPE1ldGFkYXRhPiB7CiAgY29uc3QgeyBjYXRlZ29yeSB9ID0gYXdhaXQgcGFyYW1zOwogIGNvbnN0IGxhYmVsID0gY2F0ZWdvcnlMYWJlbHNbY2F0ZWdvcnldOwogIGlmICghbGFiZWwpIHJldHVybiB7IHRpdGxlOiAnTm90IEZvdW5kJyB9OwogIHJldHVybiB7IHRpdGxlOiBgJHtsYWJlbH0gLSBMaWZlVGlwc2AsIGRlc2NyaXB0aW9uOiBgQXJ0aWNsZXMgYWJvdXQgJHtsYWJlbH1gIH07Cn0KCmV4cG9ydCBkZWZhdWx0IGFzeW5jIGZ1bmN0aW9uIENhdGVnb3J5UGFnZSh7IHBhcmFtcyB9OiBQcm9wcykgewogIGNvbnN0IHsgY2F0ZWdvcnkgfSA9IGF3YWl0IHBhcmFtczsKICBpZiAoIWNhdGVnb3J5TGFiZWxzW2NhdGVnb3J5XSkgbm90Rm91bmQoKTsKCiAgY29uc3QgYXJ0aWNsZXMgPSBhd2FpdCBnZXRBcnRpY2xlc0J5VHlwZShjYXRlZ29yeSk7CgogIHJldHVybiAoCiAgICA8ZGl2IHN0eWxlPXt7IG1heFdpZHRoOiAxMjAwLCBtYXJnaW46ICcwIGF1dG8nLCBwYWRkaW5nOiAnNDBweCAyNHB4JyB9fT4KICAgICAgPGgxIHN0eWxlPXt7IG1hcmdpbkJvdHRvbTogMzIgfX0+e2NhdGVnb3J5TGFiZWxzW2NhdGVnb3J5XX08L2gxPgogICAgICB7YXJ0aWNsZXMubGVuZ3RoID09PSAwID8gKAogICAgICAgIDxwIHN0eWxlPXt7IGNvbG9yOiAnIzY2NicgfX0+Tm8gYXJ0aWNsZXMgeWV0LjwvcD4KICAgICAgKSA6ICgKICAgICAgICA8ZGl2IHN0eWxlPXt7IGRpc3BsYXk6ICdncmlkJywgZ3JpZFRlbXBsYXRlQ29sdW1uczogJ3JlcGVhdChhdXRvLWZpbGwsIG1pbm1heCgzMDBweCwgMWZyKSknLCBnYXA6IDI4IH19PgogICAgICAgICAge2FydGljbGVzLm1hcCgoYXJ0aWNsZSkgPT4gKAogICAgICAgICAgICA8TGluawogICAgICAgICAgICAgIGtleT17YXJ0aWNsZS5pZH0KICAgICAgICAgICAgICBocmVmPXtgLyR7YXJ0aWNsZS50eXBlfS8ke2FydGljbGUuc2x1Z31gfQogICAgICAgICAgICAgIHN0eWxlPXt7IHRleHREZWNvcmF0aW9uOiAnbm9uZScsIGNvbG9yOiAnaW5oZXJpdCcsIGJhY2tncm91bmQ6ICcjZmZmJywgYm9yZGVyUmFkaXVzOiAxMiwgb3ZlcmZsb3c6ICdoaWRkZW4nLCBib3hTaGFkb3c6ICcwIDJweCAxMHB4IHJnYmEoMCwwLDAsMC4wOCknLCBkaXNwbGF5OiAnYmxvY2snIH19CiAgICAgICAgICAgID4KICAgICAgICAgICAgICB7YXJ0aWNsZS5pbWcgJiYgKAogICAgICAgICAgICAgICAgPGltZyBzcmM9e2FydGljbGUuaW1nfSBhbHQ9e2FydGljbGUudGl0bGV9IHN0eWxlPXt7IHdpZHRoOiAnMTAwJScsIGhlaWdodDogMjAwLCBvYmplY3RGaXQ6ICdjb3ZlcicsIGRpc3BsYXk6ICdibG9jaycgfX0gLz4KICAgICAgICAgICAgICApfQogICAgICAgICAgICAgIDxkaXYgc3R5bGU9e3sgcGFkZGluZzogMjAgfX0+CiAgICAgICAgICAgICAgICA8aDIgc3R5bGU9e3sgZm9udFNpemU6ICcxLjFyZW0nLCBtYXJnaW5Cb3R0b206IDgsIGxpbmVIZWlnaHQ6IDEuNCB9fT57YXJ0aWNsZS50aXRsZX08L2gyPgogICAgICAgICAgICAgICAge2FydGljbGUuZGVzY3JpcHRpb24gJiYgPHAgc3R5bGU9e3sgZm9udFNpemU6ICcwLjlyZW0nLCBjb2xvcjogJyM2NjYnLCBtYXJnaW46IDAgfX0+e2FydGljbGUuZGVzY3JpcHRpb259PC9wPn0KICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgPC9MaW5rPgogICAgICAgICAgKSl9CiAgICAgICAgPC9kaXY+CiAgICAgICl9CiAgICA8L2Rpdj4KICApOwp9Cg=="}
+import { notFound } from 'next/navigation';
+import Link from 'next/link';
+import type { Metadata } from 'next';
+import { getArticlesByType } from '@/lib/queries';
+
+const categoryLabels: Record<string, string> = {
+  'kitchen-hacks': 'Kitchen Hacks',
+  'closet-organization': 'Closet Organization',
+  'eco-cleaning': 'Eco-Cleaning',
+  'plant-care': 'Plant Care',
+  'laundry-secrets': 'Laundry Secrets',
+  'tech-efficiency': 'Tech Efficiency',
+};
+
+interface Props {
+  params: Promise<{ category: string }>;
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { category } = await params;
+  const label = categoryLabels[category];
+  if (!label) return { title: 'Not Found' };
+  return { title: `${label} - LifeTips`, description: `Articles about ${label}` };
+}
+
+export default async function CategoryPage({ params }: Props) {
+  const { category } = await params;
+  if (!categoryLabels[category]) notFound();
+
+  const articles = await getArticlesByType(category);
+
+  return (
+    <div style={{ maxWidth: 1200, margin: '0 auto', padding: '40px 24px' }}>
+      <h1 style={{ marginBottom: 32 }}>{categoryLabels[category]}</h1>
+      {articles.length === 0 ? (
+        <p style={{ color: '#666' }}>No articles yet.</p>
+      ) : (
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 28 }}>
+          {articles.map((article) => (
+            <Link
+              key={article.id}
+              href={`/${article.type}/${article.slug}`}
+              style={{ textDecoration: 'none', color: 'inherit', background: '#fff', borderRadius: 12, overflow: 'hidden', boxShadow: '0 2px 10px rgba(0,0,0,0.08)', display: 'block' }}
+            >
+              {article.img && (
+                <img src={article.img} alt={article.title} style={{ width: '100%', height: 200, objectFit: 'cover', display: 'block' }} />
+              )}
+              <div style={{ padding: 20 }}>
+                <h2 style={{ fontSize: '1.1rem', marginBottom: 8, lineHeight: 1.4 }}>{article.title}</h2>
+                {article.description && <p style={{ fontSize: '0.9rem', color: '#666', margin: 0 }}>{article.description}</p>}
+              </div>
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}

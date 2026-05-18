@@ -1,1 +1,32 @@
-{"data":"aW1wb3J0IExpbmsgZnJvbSAnbmV4dC9saW5rJzsKCmV4cG9ydCBmdW5jdGlvbiBIZWFkZXIoKSB7CiAgcmV0dXJuICgKICAgIDxoZWFkZXIgc3R5bGU9e3sKICAgICAgYm9yZGVyQm90dG9tOiAnMXB4IHNvbGlkICNlZWUnLAogICAgICBwYWRkaW5nOiAnMXJlbSA1JScsCiAgICAgIGRpc3BsYXk6ICdmbGV4JywKICAgICAganVzdGlmeUNvbnRlbnQ6ICdzcGFjZS1iZXR3ZWVuJywKICAgICAgYWxpZ25JdGVtczogJ2NlbnRlcicsCiAgICAgIHBvc2l0aW9uOiAnc3RpY2t5JywKICAgICAgdG9wOiAwLAogICAgICBiYWNrZ3JvdW5kOiAnd2hpdGUnLAogICAgICB6SW5kZXg6IDEwMDAsCiAgICB9fT4KICAgICAgPExpbmsgaHJlZj0iLyIgc3R5bGU9e3sKICAgICAgICBmb250U2l6ZTogJzEuNXJlbScsCiAgICAgICAgZm9udFdlaWdodDogJ2JvbGQnLAogICAgICAgIGNvbG9yOiAnIzAwYThhOCcsCiAgICAgICAgdGV4dERlY29yYXRpb246ICdub25lJywKICAgICAgfX0+CiAgICAgICAgTGlmZVRpcHM8c3BhbiBzdHlsZT17eyBjb2xvcjogJyNmZjZhMDAnIH19Pi48L3NwYW4+CiAgICAgIDwvTGluaz4KICAgICAgPG5hdiBzdHlsZT17eyBkaXNwbGF5OiAnZmxleCcsIGdhcDogJzIwcHgnIH19PgogICAgICAgIDxMaW5rIGhyZWY9Ii8iIHN0eWxlPXt7IHRleHREZWNvcmF0aW9uOiAnbm9uZScsIGNvbG9yOiAnIzY2NicsIGZvbnRXZWlnaHQ6IDUwMCB9fT5MYXRlc3Q8L0xpbms+CiAgICAgICAgPExpbmsgaHJlZj0iLyNhcnRpY2xlcyIgc3R5bGU9e3sgdGV4dERlY29yYXRpb246ICdub25lJywgY29sb3I6ICcjNjY2JywgZm9udFdlaWdodDogNTAwIH19PlBvcHVsYXI8L0xpbms+CiAgICAgICAgPExpbmsgaHJlZj0iLyNhcnRpY2xlcyIgc3R5bGU9e3sgdGV4dERlY29yYXRpb246ICdub25lJywgY29sb3I6ICcjNjY2JywgZm9udFdlaWdodDogNTAwIH19PkZlYXR1cmVkPC9MaW5rPgogICAgICAgIDxMaW5rIGhyZWY9IiMiIHN0eWxlPXt7IHRleHREZWNvcmF0aW9uOiAnbm9uZScsIGNvbG9yOiAnIzY2NicsIGZvbnRXZWlnaHQ6IDUwMCB9fT5BYm91dDwvTGluaz4KICAgICAgPC9uYXY+CiAgICA8L2hlYWRlcj4KICApOwp9Cg=="}
+import Link from 'next/link';
+
+export function Header() {
+  return (
+    <header style={{
+      borderBottom: '1px solid #eee',
+      padding: '1rem 5%',
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      position: 'sticky',
+      top: 0,
+      background: 'white',
+      zIndex: 1000,
+    }}>
+      <Link href="/" style={{
+        fontSize: '1.5rem',
+        fontWeight: 'bold',
+        color: '#00a8a8',
+        textDecoration: 'none',
+      }}>
+        LifeTips<span style={{ color: '#ff6a00' }}>.</span>
+      </Link>
+      <nav style={{ display: 'flex', gap: '20px' }}>
+        <Link href="/" style={{ textDecoration: 'none', color: '#666', fontWeight: 500 }}>Latest</Link>
+        <Link href="/#articles" style={{ textDecoration: 'none', color: '#666', fontWeight: 500 }}>Popular</Link>
+        <Link href="/#articles" style={{ textDecoration: 'none', color: '#666', fontWeight: 500 }}>Featured</Link>
+        <Link href="#" style={{ textDecoration: 'none', color: '#666', fontWeight: 500 }}>About</Link>
+      </nav>
+    </header>
+  );
+}
